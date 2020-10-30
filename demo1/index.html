@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+    <style>
+        
+        /* Lergenda Personalizada */
+        .highcharts-legend > rect {
+            stroke-width:1;
+            stroke:blue;
+            ry:8;
+            rx:8;
+            x:-2;
+            y:-2;
+        }
+
+    </style>
 </head>
 <body>
+
 
     <div id="container" style="width:100%; height:400px;"></div>
 
@@ -15,10 +29,45 @@
         document.addEventListener('DOMContentLoaded', function() {
             var myChart = Highcharts.chart('container', {
                 chart: {
-                    type: 'bar'
+                    type: 'column',
+                    spacingBottom: 50,
+                    spacingLeft: 20,
+                    spacingRight: 20,
+                    borderWidth: 5,
+                    borderColor: "#000",
+                    borderRadius: 8
                 },
                 title: {
                     text: 'Fruit Consumption'
+                },
+                credits: {
+                    position: {
+                        align: 'right',
+                        verticalAlign: 'bottom',
+                        y: -20,
+                        x: -20
+                    },
+                    style: {
+                        color: "#111",
+                        fontSize: "20px",
+                    },
+                },
+                legend: {
+                    enabled: true,
+                    layout: 'horizontal',
+                    itemMarginBottom:7,
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    itemStyle: {
+                        font: '9pt Raleway,Helvetica,sans-serif',
+                        color: '#111'
+                    },
+                    itemHoverStyle: {
+                        color: '#000'
+                    },
+                    itemHiddenStyle: {
+                        color: '#444'
+                    },
                 },
                 xAxis: {
                     categories: ['Apples', 'Bananas', 'Oranges']
