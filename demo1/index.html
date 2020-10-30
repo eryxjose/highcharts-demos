@@ -85,6 +85,14 @@
                     data: [5, 7, 3]
                 }]
             });
+
+            myChart.renderer
+                .text("* Texto personalizado ou comentário adicionado.", "", document.getElementById("container").offsetHeight - 20)
+                .attr({
+                    zIndex: 2,
+                })
+                .add();
+            
         });
     </script>
 </body>

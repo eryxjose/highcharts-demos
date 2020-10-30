@@ -1,3 +1,3 @@
 # Highchart Demos
 
-Verifique o histórico de commits para entender as alterações implementadas passo a passo.
+Utilize o comando git log para ver o histórico de commits.
